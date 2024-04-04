@@ -1,38 +1,52 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+/* src/components/ImageGallery.css */
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+  gap: 20px; /* Adjust gap between images */
 }
 
-.App-link {
-  color: #61dafb;
+.image-gallery img {
+  width: 100%; /* Ensure images fill their grid cells */
+  height: auto; /* Maintain aspect ratio */
+}
+.image-gallery button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-gallery button:hover {
+    background-color: #0056b3;
+}
+
+.performance-analysis {
+    margin-top: 40px;
+}
+
+.performance-analysis h2 {
+    text-align: center;
+}
+
+.performance-analysis ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.performance-analysis li {
+    margin-bottom: 10px;
 }

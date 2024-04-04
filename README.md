@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Документация проекта "my-gallery"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
+Проект "my-gallery" представляет собой веб-приложение для просмотра галереи изображений, разработанное с использованием библиотеки React. Главная цель приложения - предоставить пользователям удобный способ просматривать и организовывать свои изображения.
 
-## Available Scripts
+## Основные компоненты
 
-In the project directory, you can run:
+### 1. App
+Это основной компонент приложения, который обеспечивает рендеринг и управление состоянием приложения. В компоненте App происходит загрузка и отображение галереи изображений.
 
-### `npm start`
+### 2. Gallery
+Компонент Gallery предназначен для отображения галереи изображений. Он принимает список изображений в качестве свойства и отображает их в удобном для пользователя формате.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 3. Image
+Image - это компонент, отвечающий за отображение отдельного изображения в галерее. Каждый экземпляр компонента Image принимает свойства, такие как URL изображения, заголовок и описание, и отображает их на странице.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Методы оптимизации
 
-### `npm test`
+### 1. Ленивая загрузка изображений
+Для улучшения производительности приложения была применена техника ленивой загрузки изображений. Это позволяет откладывать загрузку изображений до тех пор, пока они не станут видимыми для пользователя. Для реализации ленивой загрузки использовались соответствующие библиотеки и инструменты, такие как Intersection Observer API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Кэширование изображений
+Для сокращения времени загрузки изображений и улучшения отзывчивости приложения было внедрено кэширование изображений. После загрузки изображений они кэшируются на стороне клиента, что позволяет повторно использовать их при последующих запросах. Это особенно полезно при просмотре больших галерей изображений, так как пользователь не будет вынужден ждать загрузки изображений повторно.
 
-### `npm run build`
+### 3. Оптимизация бандлов
+Для уменьшения размера бандлов и улучшения времени загрузки приложения были применены различные методы оптимизации кода и настройки сборки. Это включает в себя минимизацию и компрессию JavaScript и CSS файлов, использование lazy loading для компонентов и ресурсов, а также анализ и удаление неиспользуемого кода и библиотек.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Выводы
+Применение ленивой загрузки и кэширования изображений оказали значительное влияние на производительность и пользовательский опыт. Эти методы позволили сократить время загрузки страницы и снизить нагрузку на сеть пользователя, что привело к улучшению общего впечатления от использования приложения. Также оптимизация бандлов способствовала ускорению начальной загрузки приложения, что сделало его более отзывчивым и удобным в использовании.
